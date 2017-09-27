@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 100px;
+}
+
+.App-header {
+  background-color: #ffdb15;
+  height: auto;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 35px;
+  border: 15px;
+  color: #333;
+}
+
+.App-footer {
+  background-color: #ffdb15;
+  height: 25px;
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  color: #333;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-input {
+  margin-top: 10px;
+}
+
+.App-intro {
+  font-size: large;
+}
