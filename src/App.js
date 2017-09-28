@@ -19,7 +19,6 @@ class App extends Component {
   getItems(props){
       var itemInput = this.state.itemName
       var self = this
-      console.log(this.state.itemName);
       axios.get(apiMLUrl+'sites/MCO/search', {
         params: {
           q: itemInput
@@ -31,7 +30,6 @@ class App extends Component {
 		      return;
         }
         self.setState({itemsData: response.data})
-        console.log(self.state.itemsData);
       })
       .catch(function (error) {
         console.log(error)
@@ -45,13 +43,29 @@ class App extends Component {
 
   itemsList() {
      var items = this.state.itemsData
-     console.log("@@@",items)
+     var self = this
      if (items.results) {
-       var listItems = items.results.map(function(item) {return <div><a>{item.title}</a><br/></div>})
+       console.log(items.results);
+       var listItems = items.results.map(function(item) {
+         return (
+          <div className="Card-item" >
+            <p>
+              <img src={item.thumbnail} className="Card-image"/>
+              <div className="Card-description">
+                <div className="Card-title">{item.title}</div>
+                <div>Price: {item.price} {item.currency_id}</div>
+                <div>Sold quantity: {item.sold_quantity}</div>
+                <a href={item.permalink}>Link to item</a>
+              </div>
+            </p>
+          </div>
+        )
+       })
        return(
          <div>{listItems}</div>
        )
      } else {
+       console.log("Error");
        return(
          <div></div>
        )
@@ -73,7 +87,6 @@ class App extends Component {
           <br/>
         </header>
         <div className="App-intro">
-          <a>{this.state.itemName}</a>
           <div>{this.itemsList()}</div>
         </div>
         <div className="App-footer">
