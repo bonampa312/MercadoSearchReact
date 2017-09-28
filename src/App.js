@@ -55,7 +55,7 @@ class App extends Component {
                 <div className="Card-title">{item.title}</div>
                 <div>Price: {item.price} {item.currency_id}</div>
                 <div>Sold quantity: {item.sold_quantity}</div>
-                <a href={item.permalink}>Link to item</a>
+                <a href={item.permalink}>View in Mercadolibre</a>
               </div>
             </p>
           </div>
@@ -76,21 +76,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MercadoSarch Bonampa312</h1>
-          <br/>
-          <div className="App-input">
-            <input type="text" onChange={this.setParam}></input>
-            <button onClick={this.getItems}>Push Me</button>
+        <div>
+          <header className="App-header">
+            <div id="search">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">MercadoSearch Bonampa312</h1>
+              <br/>
+              <div>
+                <input type="text" onChange={this.setParam}></input>
+                <button onClick={this.getItems}>Push Me</button>
+              </div>
+              <br/>
+            </div>
+          </header>
+          <div className="App-intro">
+            <div>{this.itemsList()}</div>
           </div>
-          <br/>
-        </header>
-        <div className="App-intro">
-          <div>{this.itemsList()}</div>
+          <div className="App-footer">
+            <a>Powered by: Santiago Romero</a>
+          </div>
         </div>
-        <div className="App-footer">
-          <a>Powered by: Santiago Romero</a>
+        <div>
+          <div id="left" className="App-laterals"></div>
+          <div id="right" className="App-laterals"></div>
         </div>
       </div>
     );

@@ -7,15 +7,19 @@
 }
 
 .App-header {
-  background-color: #ffdb15;
   height: auto;
-  width: 40%;
+  width: 100%;
   margin: auto;
-  margin-top: 20px;
+}
+
+#search {
+  background-color: #ffdb15;
   border: 1px solid black;
   border-radius: 35px;
-  border: 15px;
+  margin: auto;
+  margin-top: 20px;
   color: #333;
+  width: 20%;
 }
 
 .App-footer {
@@ -31,19 +35,36 @@
 }
 
 .App-title {
+  margin: 0;
   font-size: 1.5em;
-}
-
-.App-input {
-  margin-top: 10px;
 }
 
 .App-intro {
   font-size: large;
 }
 
+.App-laterals {
+  background-color: #333;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
 .Card-item {
-  background-color: beige;
+  background-color: #f7f2f2;
+  color: #333;
   margin: auto;
   width: 50%;
   display: inline-block;
