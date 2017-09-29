@@ -84,7 +84,7 @@ class App extends Component {
               <br/>
               <div>
                 <input type="text" onChange={this.setParam}></input>
-                <button onClick={this.getItems}>Push Me</button>
+                <button onClick={this.getItems}>Go for it</button>
               </div>
               <br/>
             </div>
