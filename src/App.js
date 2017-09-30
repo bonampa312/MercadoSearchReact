@@ -80,7 +80,8 @@ class App extends Component {
           <header className="App-header">
             <div id="search">
               <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">MercadoSearch Bonampa312</h1>
+              <h1 className="App-title">MercadoSearch</h1>
+              <h2 className="App-subtitle">@bonampa312</h2>
               <br/>
               <div>
                 <input type="text" onChange={this.setParam}></input>
